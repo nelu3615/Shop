@@ -1,0 +1,14 @@
+<div class="col-md-8" >
+  <ul class="list-group" *ngIf="todo">
+    <li class="list-group-item" *ngFor="let u of todo">
+      <div *ngIf="u.completed">
+        ID : {{ u.id }}  
+        <br>
+         Title : {{u.title}}
+         <br>
+         Completed : {{u.completed}}
+      </div>
+    </li>
+
+  </ul>
+</div>

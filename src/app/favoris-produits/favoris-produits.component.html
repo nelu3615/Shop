@@ -1,0 +1,11 @@
+<div> 
+  <h4>Produits Favoris</h4>
+  <app-favoris *ngFor="let p of produitsFavoris; let i = index"
+    [titre] = "p.titre"
+    [image] = "p.image"
+    [prix] = "p.prix"
+    [index] = "i"
+  ></app-favoris>
+   
+    
+</div> 

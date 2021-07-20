@@ -1,0 +1,12 @@
+<div class="row">
+  <app-produit class="col-3" *ngFor="let produit of produits; let i = index"
+      [titre]="produit.titre"
+      [description]="produit.description"
+      [image]="produit.image"
+      [prix]="produit.prix"
+      [favoris]="produit.favoris"
+      (onClickLike)="addFavorisOutput($event)"
+      (onClickUnlike)="removeFavorisOutput($event)"
+      [index]="i"
+  ></app-produit>
+</div>

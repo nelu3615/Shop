@@ -1,0 +1,40 @@
+<div>
+  <div>
+    <img height="250" width="100%" [src]="image" alt="">
+    <div *ngIf="!favoris">
+      <button  class="btn" 
+      (click)="onClickLike.emit(titre)" >
+      <i class="far fa-heart"></i>   </button>
+    </div>
+    <div *ngIf="favoris">
+      <button  class="btn" 
+      (click)="onClickUnlike.emit(titre)" >
+      <i class="fas fa-heart"></i>  </button>
+    </div>
+          <!--
+           <div *ngIf="!favoris">
+            <button (click)="addFavoris()" class="btn border px-2 py-2" style="position: absolute;
+            top: 1%;
+            left: 78%;
+            font-size: 16px;
+            padding: 12px 24px;
+            cursor: pointer;
+            text-align: center;">unlike</button>
+          </div>
+          -->
+  <!--
+  <div *ngIf="favoris">
+      <button (click)="removeFavoris()" class="btn border px-2 py-2" style="position: absolute;
+      top: 1%;
+      left: 78%;
+      font-size: 16px;
+      padding: 12px 24px;
+      cursor: pointer;
+      text-align: center;">unlike</button>
+    </div>
+  -->  
+  <p>{{description}}</p>
+  <h5>{{titre}}</h5>
+  <h6>{{prix}}</h6>
+  <h6>{{favoris}}</h6>
+</div>
